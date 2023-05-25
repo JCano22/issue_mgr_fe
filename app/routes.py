@@ -46,7 +46,7 @@ def update_task(pk):
     response = requests.put(url, json=task_data)
     if response.status_code == 204:
         return render_template("success.html")
-    return render_template("error.html", response.status_code), response.status_code
+    return render_template("error.html", err=response.status_code), response.status_code
 
 @app.get("/tasks/new")
 def render_new_form():
@@ -54,7 +54,12 @@ def render_new_form():
 
 @app.post("/task/new")
 def create_task():
-    pass
+    url = "%s/tasks" % (BACKEND_URL)
+    task_data = request.form
+    response = requests.post(url, json=task_data)
+    if response.status_code == 204:
+        return render_template("success.html")
+    return render_template("error.html", err=response.status_code), response.status_code
 
 @app.get("/tasks/<int:pk>")
 def view_task_by_id(pk):
