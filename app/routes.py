@@ -14,7 +14,7 @@ BACKEND_URL = 'http://127.0.0.1:5000'
 @app.get("/")
 def home():
     mylist = [1, 2, 3, 4 , 5,]
-    timestamp = datetime.now().strftime("%F %H:%M:%S")
+    timestamp = datetime.now().strftime("%H:%M:%S")
     return render_template("home.html", ts=timestamp, numbers=mylist)
 
 @app.get("/about")
