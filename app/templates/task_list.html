@@ -13,7 +13,9 @@
 
       <div class="card-body">
         <h5 class="card-title">{{ task["summary"] }}</h5>
+        <div class="card-text-div">
         <p class="card-text">{{ task['description'] }}.</p>
+      </div>
         <div class="row">
           <div class="col-md-4">
             <form method="POST" action="{{ url_for('update_task', pk=task['id']) }}">
@@ -25,7 +27,7 @@
           </div>
           <div class="col-md-4">
             <a href="{{ url_for('render_edit_form', pk=task['id']) }}" 
-            class="card-link">Edit <i class="bi bi-pencil"></i> </a>
+            class="card-link edit">Edit <i class="bi bi-pencil"></i> </a>
           </div>
         </div>
   </div>
