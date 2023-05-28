@@ -113,7 +113,7 @@ form {
 form .bi-trash {
   position: absolute;
   left: 325px;
-  bottom: 155px;
+  bottom: 151px;
 }
 
 .col-md-4 {
@@ -147,4 +147,6 @@ form .bi-trash {
   overflow: visible;
   width: 45% !important;
   text-align: center;
+}
+.col-md-4 .bi-pencil:hover {
 }
