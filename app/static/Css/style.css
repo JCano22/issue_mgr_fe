@@ -1,127 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: #EEEEEE !important;
-    letter-spacing: 2.5px;
-    font-family: 'Poppins', sans-serif;
-
+body {
+  background-color: #eeeeee !important;
+  letter-spacing: 2.5px;
+  font-family: "Poppins", sans-serif;
 }
 /*NavBar*/
-body .navbar{
-    background-color: #394867 !important;
-
-
+body .navbar {
+  background-color: #394867 !important;
 }
-.navbar .container-fluid{
-    display: flex !important;
+.navbar .container-fluid {
+  display: flex !important;
 }
-.navbar .navbar-brand{
-    color: #acb2bc !important;
-    font-size: 1.3rem;
+.navbar .navbar-brand {
+  color: #acb2bc !important;
+  font-size: 1.3rem;
 }
-.navbar-nav a:hover{
-    height: 100%;
-    background-color: #acb2bc;
+.navbar-nav a:hover {
+  height: 100%;
+  background-color: #acb2bc;
 }
 
 /*container*/
-body .container{
-    margin: auto !important;
-    height: calc(100vh - 50px) !important;
-    
-    
+body .container {
+  margin: auto !important;
+  height: calc(100vh - 50px) !important;
 }
 
 /* Home Template */
-.homeDiv{
-    height: 85%;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;;
-
+.homeDiv {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.homeH1{
-    font-size: 10rem;
-    font-weight: 600;
-    text-shadow: 6px 3px #acb2bc;
+.homeH1 {
+  font-size: 10rem;
+  font-weight: 600;
+  text-shadow: 6px 3px #acb2bc;
 }
-.homeTime{
-    font-size: 2rem;
-
+.homeTime {
+  font-size: 2rem;
 }
 
 /*About Template*/
-.aboutDiv{
-    height: 85%;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;;
+.aboutDiv {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.aboutDiv h1{
-    font-size: 6rem;
-    font-weight: 500;
-    text-shadow: 4px 2px #acb2bc;
+.aboutDiv h1 {
+  font-size: 6rem;
+  font-weight: 500;
+  text-shadow: 4px 2px #acb2bc;
 }
-.aboutDiv p{
-    width: 75%;
-    margin: 0 auto;
+.aboutDiv p {
+  width: 75%;
+  margin: 0 auto;
 }
 
 /*Task List Template*/
-.taskListH1{
-    text-align: center;
-    font-size: 3.6rem;
-    font-weight: bold;
-    text-shadow: 2px 1px #acb2bc;
-    margin: 55px 0 20px;
+.taskListH1 {
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-shadow: 2px 1px #acb2bc;
+  margin: 55px 0 20px;
 }
-.cardDiv{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    box-sizing: content-box;
-       
+.cardDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-sizing: content-box;
 }
-.card{
-    width: 370px !important;
-    min-height: 200px;
-    margin: 7px !important;
-    
-    
+.card {
+  width: 370px !important;
+  min-height: 200px;
+  margin: 7px !important;
+  position: relative;
 }
-.card:hover{
-    box-shadow:3px 5px #acb2bc;
+.card:hover {
+  box-shadow: 3px 5px #acb2bc;
 }
-.card-title, 
-.card-text, 
-.bi-pencil, 
+.card-title,
+.card-text,
+.bi-pencil,
 .bi-trash,
-.edit
-{
-    color: black !important;
-    text-decoration: none !important;
-    
-}   
-.card-title{
-    font-weight: bold;
+.edit {
+  color: black !important;
+  text-decoration: none !important;
 }
-.card-text-div{
-    height: 75px;   
-    overflow:hidden;
-    
-    
+.card-title {
+  font-weight: bold;
 }
-.card-body{
-    display: flex;
-    flex-direction: column;
+.card-text-div {
+  height: 75px;
+  overflow: hidden;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  max-height: 0px;
+}
+form .bi-trash {
+  position: absolute;
+  left: 325px;
+  bottom: 155px;
 }
 
+.col-md-4 {
+  position: absolute;
+  top: 160px;
+}
 
+/*Edit Template*/
+.mb-3 {
+  width: 30% !important;
+  margin: 45px auto 0;
+}
+.mb-3 label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.mb-3 p {
+  margin: 25px 0;
+}
 
+/*Success Template*/
+.success {
+  margin: 25px;
+}
 
+/*Detail Template*/
+.detailCard {
+  margin: auto !important;
+  margin-top: 55px !important;
+  height: auto;
+  overflow: visible;
+  width: 45% !important;
+  text-align: center;
+}

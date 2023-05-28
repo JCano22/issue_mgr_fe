@@ -12,18 +12,22 @@
       <a href="{{ url_for('view_task_by_id', pk=task['id']) }}">
 
       <div class="card-body">
-        <h5 class="card-title">{{ task["summary"] }}</h5>
+        <div class="card-title-div">
+          <h5 class="card-title">{{ task["summary"] }}</h5>
+        </div>
+        <form method="POST" action="{{ url_for('update_task',   pk=task ['id']) }}">
+          <input type="hidden" name="summary" id="id_summary" value="{{ task['summary'] }}">
+          <input type="hidden" name="description" id="id_description" value="{{ task['description'] }}">
+          <input type="hidden" name="is_active" id="id_is_active" value="false">
+          <button type="submit" class="btn btn-link"><i class="bi bi-trash"></i></button>
+        </form>
+
         <div class="card-text-div">
         <p class="card-text">{{ task['description'] }}.</p>
       </div>
         <div class="row">
           <div class="col-md-4">
-            <form method="POST" action="{{ url_for('update_task', pk=task['id']) }}">
-              <input type="hidden" name="summary" id="id_summary" value="{{ task['summary'] }}">
-              <input type="hidden" name="description" id="id_description" value="{{ task['description'] }}">
-              <input type="hidden" name="is_active" id="id_is_active" value="false">
-              <button type="submit" class="btn btn-link"><i class="bi bi-trash"></i></button>
-            </form>
+            
           </div>
           <div class="col-md-4">
             <a href="{{ url_for('render_edit_form', pk=task['id']) }}" 
